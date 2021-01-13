@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>P&I - Board</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link rel="shortcut icon" href="https://www.zong.com.pk/assets/images/favicon.ico" type="image/x-icon" />
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="css/circle.css" rel="stylesheet">
+</head>
+
+<body id="page-top" ng-app='myApplication' ng-controller="theController">
+
+  <div class="form m-md-5">
+            <form class="border border-danger m-auto">
+              <div class="m-5">
+              <p class="h4 mb-4 text-center text-success font-weight-bold">Add User Story</p>
+
+              <label for="textInput">Title</label>
+              <input type="text" id="textInput" class="form-control mb-4" placeholder="Text input" ng-model="title" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+
+              <label for="textarea">Description</label>
+              <textarea id="textarea" class="form-control mb-4" placeholder="Textarea" ng-model="description"></textarea>
+
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Department</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>GCSS</option>
+                  <option>Marketing</option>
+                  <option>S&D</option>
+                  <option>LDI</option>
+                  <option>Engineeering</option>
+                </select>
+              </div>
+
+              <div class="input-group mb-4">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text bg-gradient-success">Upload</span>
+                  </div>
+                  <div class="custom-file">
+                      <input type="file" class="custom-file-input " id="fileInput" aria-describedby="fileInput">
+                      <label class="custom-file-label" for="fileInput">Product Paper</label>
+                  </div>
+              </div>
+
+              <button class="btn btn-info btn-block my-4 bg-gradient-success" ng-click="login()" type="submit">Submit</button>
+
+              
+              <div class="d-flex justify-content-center" ng-if="loading=='00'">
+                <div class="spinner-border" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </div>
+
+              <div class="alert alert-primary text-danger" role="alert" ng-if="responseCode=='00'">
+                <i class="fas fa-check bg-success fa-sm text-white-50"></i>
+                The User story has beed added successfully!
+              </div>
+            </div>
+            </form>
+
+            
+            
+          </div>
+            <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-resource.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-messages.min.js"></script>
+  <script src="scripts/registrationController.js"></script>
+</body>			

@@ -1,0 +1,74 @@
+:after,*:before{
+    box-sizing: border-box;
+}
+ul{
+    margin: 0;
+    padding: 2;
+}
+.pagination1 > li{
+    overflow: hidden;
+    position: relative;
+    margin-top: 25px;
+    width: 25%;
+    float: left;
+    list-style: none;
+    padding: 0;
+}
+.pagination1 > li p{
+    left: 10%; margin-left: -5px;
+    color: #000;
+    line-height: 2;
+}
+.pagination1 > li > a{
+    line-height: 50px;
+    text-decoration: none;
+    color: #000;
+    left: 10%; margin-left: -5px;
+    display: block;
+    text-align: center;
+    position: relative;
+}
+/*positon the circle*/
+.pagination1 > li > a:before{
+    content:'';
+    position: absolute;
+    z-index: 0;
+    width: 50px; height: 50px;
+    left: 10%; margin-left: -5px;
+    border-radius: 100%;
+    border: 1px solid deeppink;
+    transition: all .2s;
+}
+
+/*positioning the line*/
+.pagination1 > li:not(:last-of-type):after,
+.pagination1 > li:not(:first-of-type):before{
+    content: '';
+    position: absolute;
+    background: deeppink;
+    top: 25px;
+    height: 1px;
+}
+.pagination1 > li:first-of-type:after{
+    left: 50%;
+    right: 0;
+    margin-left: 25px;
+}
+.pagination1 > li:not(:first-of-type):before{
+    left: 0;
+    right: 50%;
+    margin-right: 25px;    
+}
+.pagination1 > li:not(:first-of-type):after{
+    right: 0;
+    left: 50%;
+    margin-left: 25px;
+}
+
+/*hover stuff*/
+.pagination1 > li:hover a{
+    color: rgb(221, 10, 10);
+}
+.pagination > li:hover a:before{
+    background: deeppink;
+}
